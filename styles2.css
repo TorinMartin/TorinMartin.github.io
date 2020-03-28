@@ -11,6 +11,10 @@ a{
 	text-decoration: none;
 	color: #17C5FF;
 }
+p.warn{
+	color: #ff110d;
+	font-weight: bold;
+}
 a.quo{
 	color: #E8BE00;
 	font-weight: 700;
