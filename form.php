@@ -22,7 +22,7 @@ if($res['success'])
 	$message = $_POST['message'];
 	$from = 'From: Torin Portfolio'; 
 	$to = 'alowsedan@gmail.com'; 
-	$subject = 'Run Ellie - Email Inquiry';
+	$subject = 'Portfolio - Email Inquiry';
 	if(isset($_POST['g-recaptcha-response']))
 	$captcha=$_POST['g-recaptcha-response'];
 
