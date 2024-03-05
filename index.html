@@ -55,12 +55,9 @@
 			});
 		</script>
 		<script type="text/javascript" src="jquery/s2t.js"></script>
-		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body>
 		<div class="page-wrap">
-			
-
 			<div id="nav">
 				<div id="navbox">
 					<a class="nav" href="#content">Home</a>
@@ -77,15 +74,11 @@
 					<div id="news">
 						<h1 class="news">Welcome to my Portfolio!</h1>
 						<p>
-							Thank you for checking out my portfolio. My name is Torin Martin, I am currently the sole developer and maintainer of <a href="https://aatracker.net">AATracker.net</a>,
-							a stat tracking web app for America's Army 2.5!. The website is written using React / Reactstrap for the frontend and ASP.net Core MVC for the backend, hosted on Ubuntu using Nginx. 
-							The tracking service which collects player stats is a .NET 6 application which is hosted on a CentOS 7 VPS, alongside the MongoDB database and a NodeJS Discord bot!.
-							<br />
-							I am currently employed as a software developer, working on data management software. My tasks have primarily revolved around bug fixes, feature implementations, and creating and maintaining a suite of automated tests for our product.
-							Previously, I held a role as the sole developer of a distributed computing regression testing application for internal use amongst our team.
-							I enjoy creating software using various languages, and actively develop and maintain several applications used by various online communities in my free time.
-							You can read more about myself below, or check out a few projects I have worked on (along with the source code) below.
-							Thank you for stopping by!.
+							Thank you for checking out my portfolio. My name is Torin Martin and I am a software developer located in Halifax, Nova Scotia. I have been working as a software developer professionally for nearly 4 years, with a strong focus on the
+							 .NET ecosystem including but not limited to .NET Core, .NET Framework, ASP.NET, Entity Framework, C#, WinForms / WPF and more.
+						</p>
+						<p>In my spare time, I am the sole developer and maintainer of a stat tracking application and website for a retro 
+							  video game. You can check out the project here: <a href="https://aatracker.net">https://aatracker.net</a>
 						</p>
 					</div>
 				</div>
@@ -94,9 +87,9 @@
 					<div class="center">
 						<div id="news">
 							<p>
-								My name is Torin Martin. I am a software developer and NSCC graduate of the IT programming course. I have had a strong interest in computers for many years, starting out creating websites with HTML and CSS when I was in elementary school and playing around with many different types of software and plugins.
-								I am proficient with C#, Javascript and Java while also having experience with C++, Python, PHP, MySQL, HTML5, CSS3, NodeJS and more. I am currently employed as a software developer, working for Shinydocs and previously was employed by NTT Data / Fidelity Investments. 
-								In my spare time I enjoy playing music, playing video games and creating small applications for use by myself, friends and the public. (Multiple are available in the projects section of this portfolio).
+								I began my programming journey in elementary school when I began making small websites with HTML and CSS, later jumping into small bits of PHP and Javascript. Over the years I would delve into many other languages beginning with Python 
+								and PHP before discovering Java and building an understand and appreciation for object-oriented programming. I was introduced to C# / .NET Framework during my studies at Nova Scotia Community College and have worked extensively with not
+								 only the language but many different frameworks and technologies within the .NET ecosystem ever since.
 							</p>
 						</div>
 					</div>
@@ -112,9 +105,17 @@
 								<h3 class="date">May 2022 - Present</h3>
 								<h3 class="employer">Shinydocs</h3>
 								<p class="desc">
-									Development and maintenence of data management software, mostly written in C# .NET, ASP.Net Core MVC, React and Elasticsearch. I have also done a small amount of work with Pascal during my time with Shinydocs.
+									Design, implementation and maintenence of data management software solutions built using .NET, ASP.NET Core, React and Elasticsearch / Opensearch.
 								</p>
-
+								<p class="desc">
+									Designed & developed Microsoft Teams & Microsoft Exchange integration in core product.
+								</p>
+								<p class="desc">
+									Designed & developed resiliency wrapper for tools leveraging Graph API & SharePoint CSOM.
+								</p>
+								<p class="desc">
+									Design &  development of REST API's as well as integrated third-party REST API's into our codebase.
+								</p>
 								<h3 class="restitle">Software Developer</h3>
 								<h3 class="date">October 2020 - May 2022</h3>
 								<h3 class="employer">NTT Data - Fidelity Investments</h3>
@@ -160,7 +161,7 @@
 				<div id="projects">
 					<div class="center">
 						<h1 class="btitle">Projects</h1>
-						<div class="center">
+						<div class="projects">
 							<div class="box">
 								<div class="display">
 									<img class="display" src="img/aat.png" alt="Application" />
@@ -169,7 +170,7 @@
 									AATracker.net
 								</h2>
 								<p class="projdesc">
-									A web application to track America's Army 2.5 player stats written using ASP.NET Core MVC, React, .NET 6, MongoDB hosted using CentOS 7 & Ubuntu.
+									A web application to track America's Army 2.5 player stats written using ASP.NET Core, React, C# w/ .NET 7. Hosted using Nginx on CentOS 7 & Ubuntu.
 									I work with the maintainers of America's Army 2.5 to provide data which allows them to update players levels in-game.
 								</p>
 								<div class="center" style="width: 100%">
@@ -184,12 +185,14 @@
 									SCUM Server Info
 								</h2>
 								<p class="projdesc">
-									Simple web scraper application built in C# to display server data about a specific game server. The application calls an external API, parses the JSON returned and displays the information. It also features a function to ping the game server directly. This application demonstrates my ability to create an application in C#, as well as make use of a class library to add extra functionality such as the ability to parse JSON.
+									Simple web scraper application built in C# to display server data about a specific game server. The application calls an third-party API, parses the JSON returned and displays the information. It also features a function to ping the game server directly.
 								</p>
 								<div class="center" style="width: 100%">
 									<a class="btn" href="https://github.com/TorinMartin/SCUMServerListener">GitHub</a>
 								</div>
 							</div>
+						</div>
+						<div class="center projects">
 							<div class="box">
 								<div class="display">
 									<img class="display" src="img/transit.png" alt="Application" />
@@ -204,18 +207,6 @@
 							</div>
 							<div class="box">
 								<div class="display">
-									<img class="display" src="img/larv1.png" alt="Application" />
-								</div>
-								<h2 class="displaytitle">
-									Social Media
-								</h2>
-								<p class="projdesc">
-									Very simple social media application written in PHP using Laravel. This was created as an assignment to demonstrate knowledge of Laravel and the use of a MVC framework.
-								</p>
-								<a class="btn" href="https://github.com/TorinMartin/LaravelApp">GitHub</a>
-							</div>
-							<div class="box">
-								<div class="display">
 									<img class="display" src="img/maze.png" alt="Application" />
 								</div>
 								<h2 class="displaytitle">
@@ -227,6 +218,7 @@
 								<a class="btn" href="https://github.com/TorinMartin/DS2">GitHub</a>
 							</div>
 						</div>
+					
 					</div>
 				</div>
 				<div id="contact">
