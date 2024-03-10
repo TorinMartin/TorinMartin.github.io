@@ -8,233 +8,212 @@
 		<link href='//fonts.googleapis.com/css?family=Lato:100,900' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 		<link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+		<script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+		<link href="bootstrap.min.css" rel="stylesheet">
 		<script src="jquery/jquery.js"></script>
-		<script>
-			$(document).ready(function(){
-				$('a[href^="#"]').on('click',function (e) {
-					e.preventDefault();
-
-					var target = this.hash;
-					var $target = $(target);
-
-					$('html, body').stop().animate({
-						'scrollTop': $target.offset().top
-					}, 900, 'swing', function () {
-						window.location.hash = target;
-					});
-				});
-			});
-			
-		</script>
-		<script>
-			$(function() {
-				// Stick the #nav to the top of the window
-				var nav = $('#nav');
-				var navHomeY = nav.offset().top;
-				var isFixed = false;
-				var $w = $(window);
-				$w.scroll(function() {
-					var scrollTop = $w.scrollTop();
-					var shouldBeFixed = scrollTop > navHomeY;
-					if (shouldBeFixed && !isFixed) {
-						nav.css({
-							position: 'fixed',
-							top: 0,
-							left: nav.offset().left,
-						});
-						isFixed = true;
-					}
-					else if (!shouldBeFixed && isFixed)
-					{
-						nav.css({
-							position: 'static'
-						});
-						isFixed = false;
-					}
-				});
-			});
-		</script>
 		<script type="text/javascript" src="jquery/s2t.js"></script>
 	</head>
 	<body>
 		<div class="page-wrap">
-			<div id="nav">
-				<div id="navbox">
-					<a class="nav" href="#content">Home</a>
-					<a class="nav" href="#about">About Me</a>
-					<a class="nav" href="#resume">Experience</a>
-					<a class="nav" href="#education">Education</a>
-					<a class="nav" href="#projects">Projects</a>
-					<a class="nav" href="#contact">Contact</a>
+			<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand pl-05rem" href="#">Torin Martin</a>
+				<button class="navbar-toggler mr-05rem" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav">
+						<li class="nav-item pl-05rem">
+							<a class="nav-link" href="#about">About Me</a>
+						</li>
+						<li class="nav-item pl-05rem">
+							<a class="nav-link" href="#resume">Experience</a>
+						</li>
+						<li class="nav-item pl-05rem">
+							<a class="nav-link" href="#education">Education</a>
+						</li>
+						<li class="nav-item pl-05rem">
+							<a class="nav-link" href="#projects">Projects</a>
+						</li>
+						<li class="nav-item pl-05rem">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div id="intro">
+				<div id="intro-content">
+					<img class="hshot m-3" src="img/hshot.png" alt="headshot" />
+					<div id="intro-message">
+						<h2 class="intro-message text-left">Hello, my name is</h2>
+						<h1 class="intro-title text-center">Torin Martin</h1>
+					</div>
+				</div>
+				<div id="intro-description">
+					<p class="intro-message-paragraph">I am a software developer located in Halifax, Nova Scotia. I have been working as a software developer professionally for nearly 4 years, with a strong focus on the .NET ecosystem including but not limited to .NET Core, .NET Framework, ASP.NET, Entity Framework, C#, WinForms / WPF and more. Unfortunately, due to restructuring I am currently searching for a new opportunity.</p>
+					<a href="mailto:alowsedan@gmail.com"><button type="button" class="btn btn-primary">Contact Me</button></a>
 				</div>
 			</div>
-			<div id="content">
-				<div id="logo-container">
-					<h1 class="btitle welcome">Welcome</h1>
-				</div>
-				<div id="home" class="mt-3">
-					<div class="content-box">
-						<h1 class="news">Welcome to my Portfolio!</h1>
-						<p>
-							Thank you for checking out my portfolio. My name is Torin Martin and I am a software developer located in Halifax, Nova Scotia. I have been working as a software developer professionally for nearly 4 years, with a strong focus on the
-							 .NET ecosystem including but not limited to .NET Core, .NET Framework, ASP.NET, Entity Framework, C#, WinForms / WPF and more. Unfortunately, due to restructuring I am currently searching for a new opportunity.
-						</p>
-						<p>In my spare time, I am the sole developer and maintainer of a stat tracking application and website for a retro 
-							  video game. You can check out the project here: <a href="https://aatracker.net">https://aatracker.net</a>
-						</p>
-						<p>Several projects are available for review below. Unfortunately, they are a bit old however I am hoping to have some recent projects to provide soon!.</p>
+			<div class="vw-50 center mb-3" id="about">
+				<h1 class="btitle mt-5">About</h1>
+				<p class="card-text">
+					I began my programming journey in elementary school when I began making small websites with HTML and CSS, later jumping into small bits of PHP and Javascript. Over the years I would delve into many other languages beginning with Python 
+					and PHP before discovering Java and building an understand and appreciation for object-oriented programming.
+				  </p>
+				  <p class="card-text">
+					I was introduced to C# / .NET Framework during my studies at Nova Scotia Community College and have worked extensively with not
+					only the language but many different frameworks and technologies within the .NET ecosystem ever since.
+				  </p>
+				  <p class="card-text">
+					In my spare time, I am the sole developer and maintainer of a stat tracking application and website for a retro 
+					video game. You can check out the project here: <a href="https://aatracker.net" class="proj-link">https://aatracker.net</a>
+					</p>
+			</div>
+			<div class="vw-50 center mb-3" id="resume">
+				<h1 class="btitle mt-5">Resume</h1>
+				<div class="card bg-light mb-3 vw-50 center">
+					<div class="card-header"><span class="job-title">Shinydocs</span><span class="job-date">May 2022 - March 2024</span></div>
+					<div class="card-body" style="background-color: #FFF;">
+					  <h5 class="card-title">Software Developer (Intermediate)</h5>
+					  <p class="card-text project-desc">
+						Designing, developing and maintaining data management software solutions built 
+						using technologies such as ASP.NET, C# / .NET 6 – 8, .NET Framework, React, SQL / 
+						Entity Framework, Wix Installer, Inno Setup & more.
+					  </p>
+					  <ul>
+						<li class="project-desc">Designed, developed and implemented Microsoft Teams / Microsoft Exchange / 
+							SharePoint integration leveraging Microsoft Graph SDK</li>
+						<li class="project-desc">Designed, developed and implemented resiliency tooling, specifically leveraging Polly 
+							library</li>
+						<li class="project-desc">Maintained and implemented features surrounding SharePoint Online integration.
+							-Implemented licensing feature for two primary products</li>
+						<li class="project-desc">Designed and implemented the first iteration of our automated testing suite using 
+							NUnit</li>
+						<li class="project-desc">Designed and implemented several REST API's, including the endpoint / services to 
+							provide overview of customer data statistics</li>
+					  </ul>
 					</div>
 				</div>
-				<div id="about">
-					<h1 class="btitle">About</h1>
-					<div class="center">
-						<div class="content-box">
-							<p>
-								I began my programming journey in elementary school when I began making small websites with HTML and CSS, later jumping into small bits of PHP and Javascript. Over the years I would delve into many other languages beginning with Python 
-								and PHP before discovering Java and building an understand and appreciation for object-oriented programming. I was introduced to C# / .NET Framework during my studies at Nova Scotia Community College and have worked extensively with not
-								 only the language but many different frameworks and technologies within the .NET ecosystem ever since.
-							</p>
+				<div class="card bg-light mb-3 vw-50 center">
+					<div class="card-header"><span class="job-title">NTT Data - Fidelity Investments</span><span class="job-date">October 2020 - May 2022</span></div>
+					<div class="card-body" style="background-color: #FFF;">
+					  <h5 class="card-title">Software Developer</h5>
+					  <ul>
+						<li class="project-desc">Developed distributed computing regression testing software written in C# .NET, interacting with Microsoft Excel via COM Interop library</li>
+						<li class="project-desc">Maintenance of defined benefit / pension calculation engine software written in Java and VBA</li>
+						<li class="project-desc">Involved in converting an internal development tool from 32bit to 64bit, in C++</li>
+					  </ul>
+					</div>
+				</div>
+			</div>
+			<div id="education">
+				<h1 class="btitle mt-5">Education</h1>
+				<div class="vw-50 center mb-3">
+					<div class="card bg-light mb-3 vw-50 center">
+						<div class="card-header"><span class="job-title">Nova Scotia Community College</span><span class="job-date">2017 - 2020</span></div>
+						<div class="card-body" style="background-color: #FFF;">
+						  <h5 class="card-title">IT Programming</h5>
+						  <p class="card-text project-desc">
+							Graduated. Software Development with languages including but not limited to C#, C++, C, Java, Javascript, Python, HTML5, CSS3, MySQL, PHP, Laravel, XAML, Flutter / Dart.
+						  </p>
+						  <p class="card-text project-desc">Attended in person in Halifax, Nova Scotia.</p>
+						</div>
+					</div>
+					<div class="card bg-light mb-3 vw-50 center">
+						<div class="card-header"><span class="job-title">Centre For Arts & Technology</span><span class="job-date">2013 - 2014</span></div>
+						<div class="card-body" style="background-color: #FFF;">
+						  <h5 class="card-title">Web Programming</h5>
+						  <p class="card-text project-desc">
+							Graduated. Program focusing on web development. Mostly focused on PHP, HTML5, CSS3, MySQL. However we also touched on Java and Python.
+						  </p>
+						  <p class="card-text project-desc">Attended in person in Halifax, Nova Scotia.</p>
 						</div>
 					</div>
 				</div>
-
-				<div id="resume">
-					<div class="center">
-						<h1 class="btitle">Resume</h1>
-						<div class="content-box pb-3">
-							<h1 class="news">Resume</h1>
-							<div id="resumecontent">
-								<h3 class="restitle">Software Developer (Intermediate)</h3>
-								<h3 class="date">May 2022 - March 2024</h3>
-								<h3 class="employer">Shinydocs</h3>
-								<p class="desc">
-									Design, implementation and maintenence of data management software solutions built using .NET, ASP.NET Core, React and Elasticsearch / Opensearch.
-								</p>
-								<p class="desc">
-									Designed & developed Microsoft Teams & Microsoft Exchange integration in core product.
-								</p>
-								<p class="desc">
-									Designed & developed resiliency wrapper for tools leveraging Graph API & SharePoint CSOM.
-								</p>
-								<p class="desc">
-									Design &  development of REST API's as well as integrated third-party REST API's into our codebase.
-								</p>
-								<h3 class="restitle">Software Developer</h3>
-								<h3 class="date">October 2020 - May 2022</h3>
-								<h3 class="employer">NTT Data - Fidelity Investments</h3>
-								<p class="desc">
-									Developing distributed computing regression testing software written in C#, interacting with Microsoft Excel via COM Interop library. Maintenance of calculation software written in Java and VBA. I was also invovled in converting an internal development tool from 32bit to 64bit, in C++.
-								</p>
-							</div>
+				<h1 class="btitle mt-5">Certifications</h1>
+				<div class="vw-50 center mb-3">
+					<div class="card bg-light mb-3 vw-50 center">
+						<div class="card-header"><span class="job-title">Professional Scrum Master I</span><span class="job-date">2023</span></div>
+						<div class="card-body" style="background-color: #FFF;">
+						  <h5 class="card-title">SCRUM.org</h5>
+						  <p class="card-text project-desc">
+							Attended Applied Professional SCRUM Training with Shinydocs R&D Team hosted by David Dame & Matthew Grierson. Passed examination and received Professional Scrum Master I certification from SCRUM.org
+						  </p>
 						</div>
 					</div>
 				</div>
-
-				<div id="education">
-					<div class="center">
-						<h1 class="btitle">Education</h1>
-						<div class="content-box pb-3">
-							<h1 class="news">Education</h1>
-							<div id="resumecontent">
-								<h3 class="restitle">NOVA SCOTIA COMMUNITY COLLEGE</h3>
-								<h3 class="date">2017 - 2020</h3>
-								<h3 class="employer">IT Programming</h3>
-								<p class="desc">
-									Graduated. Software Development with languages including but not limited to C#, C++, C, Java, Javascript, Python, HTML5, CSS3, MySQL, PHP, Laravel, XAML, Flutter / Dart.
-								</p>
-
-								<h3 class="restitle">CENTER FOR ARTS AND TECHNOLOGY</h3>
-								<h3 class="date">2013 - 2014</h3>
-								<h3 class="employer">Web Programming Specialist</h3>
-								<p class="desc">
-									Graduated. Program focusing on web development. Mostly focused on PHP, HTML5, CSS3, MySQL. However we also touched on Java and Python.
-								</p>
-
-								<h3 class="restitle">HALIFAX WEST HIGH SCHOOL</h3>
-								<h3 class="date">2010 - 2013</h3>
-								<h3 class="employer">Student</h3>
-								<p class="desc">
-									Graduated
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div id="projects">
-					<div class="center">
-						<h1 class="btitle">Projects</h1>
-						<div class="projects">
-							<div class="box">
+			</div>
+			<div id="projects">
+				<h1 class="btitle mt-5">Projects</h1>
+				<div class="vw-50 center mb-3">
+					<div class="card-body">
+						<div class="projects mt-3">
+							<div class="card project-card">
 								<div class="display">
-									<img class="display" src="img/aat.png" alt="Application" />
+									<img class="card-img-top display" src="img/aat.png" alt="AATracker">
 								</div>
-								<h2 class="displaytitle">
-									AATracker.net
-								</h2>
-								<p class="projdesc">
-									A web application to track America's Army 2.5 player stats written using ASP.NET Core, React, C# with .NET 7. Hosted using Nginx on CentOS 7 & Ubuntu. I work with the maintainers of America's Army 2.5 to provide data which allows them to update players' levels in-game.
-								</p>
-								<p class="projdesc">
-									This is my most recent project, beginning development in 2023 alongside the tracking software which continuously monitors the tracked game servers. I intend to open-source some of this project eventually. For the time being, I am more than willing to discuss and review the source!
-								</p>
-								<div class="center" style="width: 100%">
-									<a class="btn" href="https://aatracker.net">Visit</a>
-								</div>
+							  <div class="card-body d-flex flex-column">
+								<h5 class="card-title">AATracker.net</h5>
+								<p class="card-text project-desc">A web application to track America's Army 2.5 player stats written using ASP.NET Core, React, C# with .NET 7. Hosted using Nginx on CentOS 7 & Ubuntu. I work with the maintainers of America's Army 2.5 to provide data which allows them to update players' levels in-game.</p>
+								<p class="card-text project-desc">This is my most recent project, beginning development in 2023 alongside the tracking software which continuously monitors the tracked game servers. I intend to open-source some of this project eventually. For the time being, I am more than willing to discuss and review the source!</p>
+								<a href="https://aatracker.net" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">Visit</button></a>
+							  </div>
 							</div>
-							<div class="box">
+							<div class="card project-card ml-05rem">
 								<div class="display">
-									<img class="display" src="img/trackerapp.png" alt="Application" />
+									<img class="card-img-top display" src="img/trackerapp.png" alt="Tracker Snippets"">
 								</div>
-								<h2 class="displaytitle">
-									Tracker Snippets
-								</h2>
-								<p class="projdesc">
-									A few Tracker snippets including dynamic service injection, MongoDB query wrapper, UDP query util + resiliency using Polly.
-								</p>
-								<div class="center" style="width: 100%">
-									<a class="btn" href="https://github.com/TorinMartin/QueryWrapper/tree/master">GitHub</a>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">Tracker Snippets</h5>
+									<p class="card-text project-desc">A few Tracker snippets including dynamic service injection, MongoDB query wrapper, UDP query util + resiliency using Polly.</p>
+									<a href="https://github.com/TorinMartin/QueryWrapper/tree/master" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">GitHub</button></a>
 								</div>
 							</div>
 						</div>
-						<div class="center projects">
-							<div class="box">
+						<div class="projects mt-3">
+							<div class="card project-card">
 								<div class="display">
-									<img class="display" src="img/transit.png" alt="Application" />
+									<img class="card-img-top display" src="img/transit.png" alt="Transit Tracker">
 								</div>
-								<h2 class="displaytitle">
-									Transit Tracker
-								</h2>
-								<p class="projdesc">
-									Javascript application which calls an external API and plots busses in HRM on a map, which updates in real time. This was created for a Client Side Programming assignment in 2018.
-								</p>
-								<a class="btn" href="https://github.com/TorinMartin/TT3">GitHub</a>
+							  <div class="card-body d-flex flex-column">
+								<h5 class="card-title">Transit Tracker</h5>
+								<p class="card-text project-desc">Javascript application which calls an external API and plots busses in HRM on a map, which updates in real time. This was created for a Client Side Programming assignment in 2018.</p>
+								<a href="https://github.com/TorinMartin/TT3" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">GitHub</button></a>
+							  </div>
 							</div>
-							<div class="box">
+							<div class="card project-card ml-05rem">
 								<div class="display">
-									<img class="display" src="img/maze.png" alt="Application" />
+									<img class="card-img-top display" src="img/maze.png" alt="Maze Solver">
 								</div>
-								<h2 class="displaytitle">
-									Maze Solver
-								</h2>
-								<p class="projdesc">
-									C++ application that reads a maze from a text file, solves it using a stack, and displays the result in the console. This was created for a Data Structures assignment and demonstrates my knowledge of the stack data structure and C++.
-								</p>
-								<a class="btn" href="https://github.com/TorinMartin/DS2">GitHub</a>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">Maze Solver</h5>
+									<p class="card-text project-desc">C++ application that reads a maze from a text file, solves it using a stack, and displays the result in the console. This was created for a Data Structures assignment and demonstrates my knowledge of the stack data structure and C++.</p>
+									<a href="https://github.com/TorinMartin/DS2" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">GitHub</button></a>
+								</div>
 							</div>
 						</div>
-					
 					</div>
-				</div>
-				<div id="contact">
-					<div class="center">
-						<h1 class="btitle">Contact</h1>
-						alowsedan@gmail.com
+				  </div>
+			</div>
+			<div id="contact">
+				<h1 class="btitle mt-5">Contact Me</h1>
+				<div class="vw-50 center mb-3">
+					<div class="card-body">
+						<div class="contact-block">
+							<div>
+								<a href="mailto:alowsedan@gmail.com"><img src="img/email-icon.png" alt="e-mail" /></a>
+								<span class="contact">alowsedan@gmail.com</span>
+							</div>
+							<div class="ml-1rem">
+								<a href="https://www.linkedin.com/in/torin-martin-6a04a61b1/"><img src="img/linkedin-icon.png" alt="LinkedIn" style="width: 60px; height: 60px"/></a>
+								<span class="contact">Torin Martin - LinkedIn</span>
+							</div>
+						</div>
+					</p>
 					</div>
-				</div>
+				  </div>
 			</div>
 		</div>
-		<footer class="site-footer">
+		<footer class="site-footer bg-dark mt-3">
 			<div id="footertext">
 			</div>
 		</footer>
