@@ -147,6 +147,11 @@ h1.btitle{
 	font-size: 0.9em;
 }
 
+#logos {
+	display: flex;
+	justify-content: center;
+}
+
 @media only screen and (max-width: 767px) {
 	.vw-50 {
 		max-width: 80vw;
