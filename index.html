@@ -3,19 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Torin Martin - Portfolio</title>
-		<link rel="stylesheet" type="text/css" href="styles2.css">
+		<link rel="stylesheet" type="text/css" href="custom.css">
 		<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Lato:100,900' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 		<link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
 		<link href="bootstrap.min.css" rel="stylesheet">
 		<script src="jquery/jquery.js"></script>
-		<script type="text/javascript" src="jquery/s2t.js"></script>
 		<script src="bootstrap.bundle.min.js"></script>
 	</head>
-	<body>
+	<body data-spy="scroll" data-target="#nav">
 		<div class="page-wrap">
-			<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<nav id="nav" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
 				<a class="navbar-brand pl-05rem" href="#">Torin Martin</a>
 				<button class="navbar-toggler mr-05rem" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -44,7 +43,7 @@
 				<div id="intro-content">
 					<img class="hshot m-3" src="img/hshot.png" alt="headshot" />
 					<div id="intro-message">
-						<h2 class="intro-message text-left">Hello, my name is</h2>
+						<h2 class="intro-message text-left">Hey! My name is</h2>
 						<h1 class="intro-title text-center">Torin Martin</h1>
 					</div>
 				</div>
@@ -55,7 +54,7 @@
 						during my time at each of my companies as noted below. I am a passionate, hard-working and 
 						driven software professional, and I hope you consider me for this opportunity.
 					</p>
-					<a href="mailto:alowsedan@gmail.com"><button type="button" class="btn btn-primary">Contact Me</button></a>
+					<a href="mailto:alowsedan@gmail.com"><button type="button" class="btn btn-secondary">Contact Me</button></a>
 				</div>
 			</div>
 			<div id="logos" class="mt-3">
@@ -72,8 +71,8 @@
 					<path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
 				</svg>
 			</div>
-			<div class="vw-50 center mb-3 mt-3" id="about">
-				<h1 class="btitle">About</h1>
+			<div class="vw-50 center mb-3 mt-5" id="about">
+				<h1 class="btitle">About Me</h1>
 				<p class="card-text">
 					I began my programming journey in elementary school when I began making small websites with HTML and CSS, later jumping into small bits of PHP and Javascript. Over the years I would delve into many other languages beginning with Python 
 					and PHP before discovering Java and building an understand and appreciation for object-oriented programming.
@@ -89,9 +88,9 @@
 			</div>
 			<div class="vw-50 center mb-3" id="resume">
 				<h1 class="btitle mt-5">Resume</h1>
-				<div class="card bg-light mb-3 vw-50 center">
+				<div class="card bg-light mb-3 vw-50 center rounded">
 					<div class="card-header"><span class="job-title">Shinydocs</span><span class="job-date">May 2022 - March 2024</span></div>
-					<div class="card-body" style="background-color: #FFF;">
+					<div class="card-body rounded" style="background-color: #FFF;">
 					  <h5 class="card-title">Software Developer (Intermediate)</h5>
 					  <p class="card-text project-desc">
 						As an intermediate software developer I was tasked with designing, developing and 
@@ -101,38 +100,39 @@
 						Our primary technologies used in the role were C#, .NET, ASP.NET, Entity Framework, 
 						Elasticsearch and React
 					  </p>
-					  <ul>
-						<li class="project-desc">Designed, developed and implemented Microsoft Teams / Microsoft Exchange / 
+					  <ul class="list-group list-group-flush w-75 center">
+						<li class="project-desc list-group-item">Designed, developed and implemented Microsoft Teams / Microsoft Exchange / 
 							SharePoint integration leveraging Microsoft Graph SDK</li>
-						<li class="project-desc">Designed, developed and implemented resiliency tooling, specifically leveraging Polly 
+						<li class="project-desc list-group-item">Designed, developed and implemented resiliency tooling, specifically leveraging Polly 
 							library</li>
-						<li class="project-desc">
+						<li class="project-desc list-group-item">
 							Maintained and implemented features surrounding SharePoint Online integration.
 						</li>
-						<li class="project-desc">
+						<li class="project-desc list-group-item">
 							Implemented licensing feature for two core products
 						</li>
-						<li class="project-desc">Designed and implemented the first iteration of our automated testing suite using 
+						<li class="project-desc list-group-item">Designed and implemented the first iteration of our automated testing suite using 
 							NUnit</li>
-						<li class="project-desc">Designed and implemented several REST API's, including the endpoint / services to 
+						<li class="project-desc list-group-item">Designed and implemented several REST API's, including the endpoint / services to 
 							provide overview of customer data statistics</li>
+						<li class="project-desc list-group-item">Styled and branded Kibana distribution provided to customers and used for marketing.</li>
 					  </ul>
 					</div>
 				</div>
-				<div class="card bg-light mb-3 vw-50 center">
+				<div class="card bg-light mb-3 vw-50 center rounded">
 					<div class="card-header"><span class="job-title">NTT Data - Fidelity Investments</span><span class="job-date">October 2020 - May 2022</span></div>
-					<div class="card-body" style="background-color: #FFF;">
+					<div class="card-body rounded" style="background-color: #FFF;">
 					  <h5 class="card-title">Software Developer</h5>
 					  <p class="project-desc">
 						As a software developer I was tasked with developing an internal distributed computing 
 						regression testing tool which reduced the length of our largest client’s regression run time by 
 						days. I also maintained defined benefit / pension calculation engines written in Java and VBA
 					  </p>
-					  <ul>
-						<li class="project-desc">Development of distributed computing regression testing software written using .NET 
+					  <ul class="list-group list-group-flush w-75 center">
+						<li class="project-desc list-group-item"">Development of distributed computing regression testing software written using .NET 
 							Framework, WPF, VBA and leveraging the COM Interop Library.</li>
-						<li class="project-desc">Maintenance of defined benefit / pension calculation engine software written in Java and VBA</li>
-						<li class="project-desc">Involved in converting an internal development tool from 32bit to 64bit -  C++</li>
+						<li class="project-desc list-group-item"">Maintenance of defined benefit / pension calculation engine software written in Java and VBA</li>
+						<li class="project-desc list-group-item"">Involved in converting an internal development tool from 32bit to 64bit -  C++</li>
 					  </ul>
 					</div>
 				</div>
@@ -140,9 +140,9 @@
 			<div id="education">
 				<h1 class="btitle mt-5">Education</h1>
 				<div class="vw-50 center mb-3">
-					<div class="card bg-light mb-3 vw-50 center">
+					<div class="card bg-light mb-3 vw-50 center rounded">
 						<div class="card-header"><span class="job-title">Nova Scotia Community College</span><span class="job-date">2017 - 2020</span></div>
-						<div class="card-body" style="background-color: #FFF;">
+						<div class="card-body rounded" style="background-color: #FFF;">
 						  <h5 class="card-title">IT Programming</h5>
 						  <p class="card-text project-desc">
 							Attended Nova Scotia Community College’s IT program with Programming specialization. 
@@ -153,9 +153,9 @@
 						  <p class="card-text project-desc">Attended in person in Halifax, Nova Scotia.</p>
 						</div>
 					</div>
-					<div class="card bg-light mb-3 vw-50 center">
+					<div class="card bg-light mb-3 vw-50 center rounded">
 						<div class="card-header"><span class="job-title">Centre For Arts & Technology</span><span class="job-date">2013 - 2014</span></div>
-						<div class="card-body" style="background-color: #FFF;">
+						<div class="card-body rounded" style="background-color: #FFF;">
 						  <h5 class="card-title">Web Programming</h5>
 						  <p class="card-text project-desc">
 							Attended introductory web programming course at Centre for Arts and Technology in Halifax, 
@@ -168,9 +168,9 @@
 				</div>
 				<h1 class="btitle mt-5">Certifications</h1>
 				<div class="vw-50 center mb-3">
-					<div class="card bg-light mb-3 vw-50 center">
+					<div class="card bg-light mb-3 vw-50 center rounded">
 						<div class="card-header"><span class="job-title">Professional Scrum Master I</span><span class="job-date">2023</span></div>
-						<div class="card-body" style="background-color: #FFF;">
+						<div class="card-body rounded" style="background-color: #FFF;">
 						  <h5 class="card-title">SCRUM.org</h5>
 						  <p class="card-text project-desc">
 							Attended Applied Professional SCRUM Training with Shinydocs R&D Team hosted by David Dame & Matthew Grierson. Passed examination and received Professional Scrum Master I certification from SCRUM.org
@@ -184,7 +184,7 @@
 				<div class="vw-50 center mb-3">
 					<div class="card-body">
 						<div class="projects mt-3">
-							<div class="card project-card">
+							<div class="card project-card rounded">
 								<div class="display">
 									<img class="card-img-top display" src="img/aat.png" alt="AATracker">
 								</div>
@@ -195,7 +195,7 @@
 								<a href="https://aatracker.net" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">Visit</button></a>
 							  </div>
 							</div>
-							<div class="card project-card ml-05rem">
+							<div class="card project-card ml-05rem rounded">
 								<div class="display">
 									<img class="card-img-top display" src="img/trackerapp.png" alt="Tracker Snippets"">
 								</div>
@@ -207,7 +207,7 @@
 							</div>
 						</div>
 						<div class="projects mt-3">
-							<div class="card project-card">
+							<div class="card project-card rounded">
 								<div class="display">
 									<img class="card-img-top display" src="img/transit.png" alt="Transit Tracker">
 								</div>
@@ -217,7 +217,7 @@
 								<a href="https://github.com/TorinMartin/TT3" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">GitHub</button></a>
 							  </div>
 							</div>
-							<div class="card project-card ml-05rem">
+							<div class="card project-card ml-05rem rounded">
 								<div class="display">
 									<img class="card-img-top display" src="img/maze.png" alt="Maze Solver">
 								</div>
