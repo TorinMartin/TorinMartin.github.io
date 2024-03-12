@@ -87,7 +87,6 @@ h1.btitle{
 .job-title {
 	font-weight: bold;
 	text-align: left;
-	float: left;
 }
 
 .job-date {
@@ -154,6 +153,13 @@ h1.btitle{
 #logos {
 	display: flex;
 	justify-content: center;
+}
+
+.card-header {
+	background-image: linear-gradient(#5ea8eb, #599edd 7%, #468ccb 80%, #377cb9);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: #FFF !important;
 }
 
 @media only screen and (max-width: 767px) {
