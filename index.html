@@ -192,6 +192,7 @@
 							  <div class="card-body d-flex flex-column">
 								<h5 class="card-title">AATracker.net</h5>
 								<p class="card-text project-desc">A web application to track America's Army 2.5 player stats written using ASP.NET Core, React, C# with .NET 7. Hosted using Nginx on CentOS 7 & Ubuntu. I work with the maintainers of America's Army 2.5 to provide data which allows them to update players' levels in-game.</p>
+								<p class="card-text project-desc">Servers are queried by sending a UDP request using the GameSpy V2 protocol to the servers query port. The response (in the form of a byte array) is parsed and used to track individual player stats.</p>
 								<p class="card-text project-desc">This is my most recent project, beginning development in 2023 alongside the tracking software which continuously monitors the tracked game servers. I intend to open-source some of this project eventually. For the time being, I am more than willing to discuss and review the source!</p>
 								<a href="https://aatracker.net" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">Visit</button></a>
 							  </div>
@@ -210,12 +211,12 @@
 						<div class="projects mt-3">
 							<div class="card project-card rounded">
 								<div class="display">
-									<img class="card-img-top display rounded-top" src="img/transit.png" alt="Transit Tracker">
+									<img class="card-img-top display rounded-top" src="img/scum.png" alt="SCUM Game Overlay">
 								</div>
 							  <div class="card-body d-flex flex-column">
-								<h5 class="card-title">Transit Tracker</h5>
-								<p class="card-text project-desc">Javascript application which calls an external API and plots busses in HRM on a map, which updates in real time. This was created for a Client Side Programming assignment in 2018.</p>
-								<a href="https://github.com/TorinMartin/TT3" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">GitHub</button></a>
+								<h5 class="card-title">SCUM Overlay</h5>
+								<p class="card-text project-desc">The SCUM Server Status Overlay is a project I began in 2018 to allow a friend of mine to monitor server status in-game as they owned a single monitor. It is a very simple application that queries the BatlleMetrics API to retrieve game server stats and display them not only in a Winforms GUI, but also an in-game overlay. While it is fairly dated, I've made many small improvements to it over the years.</p>
+								<a href="https://github.com/TorinMartin/SCUMServerListener" class="mt-auto center w-100"><button type="button" class="btn btn-lg btn-primary w-100">GitHub</button></a>
 							  </div>
 							</div>
 							<div class="card project-card ml-05rem rounded">
