@@ -110,8 +110,8 @@ h1.btitle{
 
 .project-card {
 	max-width: 25vw;
-	min-height: 45rem;
-	max-height: 45rem;
+	min-height: 50rem;
+	max-height: 50rem;
 }
 
 .center {
@@ -211,7 +211,7 @@ h1.btitle{
 
 @media only screen and (max-width: 1330px) {
 	.project-card {
-		min-height: 55rem;
-		max-height: 55rem;
+		min-height: 60rem;
+		max-height: 60rem;
 	}
 }
